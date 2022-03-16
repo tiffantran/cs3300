@@ -259,7 +259,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mini_racer
-  pg
+  pg (~> 0.21)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   rails_12factor

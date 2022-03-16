@@ -52,6 +52,16 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
+
+gem 'jquery-rails'
+
+gem 'bootstrap', '~> 5.1.3'
+
+gem 'friendly_id', '~> 5.4.0'
+
+gem 'mini_racer'
+
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

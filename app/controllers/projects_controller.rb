@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.most_recent
   end
 
   # GET /projects/1 or /projects/1.json
@@ -60,11 +60,11 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description)
+      params.require(:project).permit(:title, :body, :description, :banner_image_url)
     end
 end

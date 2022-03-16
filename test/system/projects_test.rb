@@ -14,7 +14,9 @@ class ProjectsTest < ApplicationSystemTestCase
     visit projects_url
     click_on "New project"
 
+    fill_in "Body", with: @project.body
     fill_in "Description", with: @project.description
+    fill_in "Slug", with: @project.slug
     fill_in "Title", with: @project.title
     click_on "Create Project"
 
@@ -26,7 +28,9 @@ class ProjectsTest < ApplicationSystemTestCase
     visit project_url(@project)
     click_on "Edit this project", match: :first
 
+    fill_in "Body", with: @project.body
     fill_in "Description", with: @project.description
+    fill_in "Slug", with: @project.slug
     fill_in "Title", with: @project.title
     click_on "Update Project"
 

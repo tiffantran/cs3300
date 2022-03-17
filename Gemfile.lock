@@ -153,7 +153,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
-    pg (0.21.0)
     popper_js (2.9.3)
     public_suffix (4.0.6)
     puma (5.6.2)
@@ -264,13 +263,12 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mini_racer
-  pg
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   rails_12factor
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data

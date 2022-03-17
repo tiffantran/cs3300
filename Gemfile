@@ -32,7 +32,6 @@ gem "jbuilder"
 
 group :production do
   #gem 'pg', '~> 0.21' # for Heroku deployment
-  gem 'pg'
   gem "unicorn"
   gem 'rails_12factor'
 end
@@ -66,7 +65,8 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'mini_racer'
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
+  #gem "sqlite3", "~> 1.4"
+  gem "sqlite3"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

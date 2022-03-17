@@ -31,7 +31,7 @@ gem "jbuilder"
 
 
 group :production do
-  #gem 'pg', '~> 0.21' # for Heroku deployment
+  gem 'pg', '~> 0.21' # for Heroku deployment
   gem "unicorn"
   gem 'rails_12factor'
 end
@@ -88,3 +88,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+

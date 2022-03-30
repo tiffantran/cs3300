@@ -1,11 +1,14 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+#ruby "2.7.0"
 ruby "3.0.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
+#gem 'rails', '~> 6.1', '>= 6.1.5'
+#gem 'rails', '~> 5.2.7'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -20,6 +23,7 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+#gem 'turbo-rails', '~> 0.9.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -28,12 +32,11 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+#gem "redis", "~> 4.0"
 
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
-  gem "unicorn"
   gem 'rails_12factor'
 end
 
@@ -55,11 +58,9 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-#gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
-
 gem 'jquery-rails'
 
-gem 'bootstrap', '~> 5.1.3'
+gem 'bootstrap', '~> 4.6', '>= 4.6.1'
 
 gem 'friendly_id', '~> 5.4.0'
 
@@ -68,8 +69,11 @@ gem 'mini_racer'
 group :development, :test do
   #gem "sqlite3", "~> 1.4"
   gem "sqlite3"
+  gem "capybara"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  #gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :development do
@@ -88,5 +92,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'simplecov', require: false
 end
 

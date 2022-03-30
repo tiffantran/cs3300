@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+
     extend FriendlyId
     friendly_id :title, use: :slugged
 
@@ -12,3 +13,8 @@ class Project < ApplicationRecord
         "Published #{created_at.strftime('%-b %-d, %Y')}"
     end
 end
+
+class Project < ApplicationRecord
+    validates_presence_of :title, :description
+  end
+

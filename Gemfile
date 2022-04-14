@@ -1,4 +1,4 @@
-=begin
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -67,6 +67,8 @@ gem 'friendly_id', '~> 5.4.0'
 
 gem 'mini_racer'
 
+gem 'devise'
+
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   #gem "sqlite3"
@@ -95,7 +97,8 @@ group :test do
   gem "webdrivers"
   gem 'simplecov', require: false
 end
-=end
+
+=begin
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -125,9 +128,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap', '~> 4.6', '>= 4.6.1'
+#gem 'bootstrap', '~> 4.6', '>= 4.6.1'
 
-gem 'friendly_id', '~> 5.4.0'
+#gem 'friendly_id', '~> 5.4.0'
+
+gem 'bootstrap'
+
+gem 'friendly_id'
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
@@ -142,8 +149,8 @@ end# Use ActiveStorage variant
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  #gem 'sqlite3'
-  gem 'sqlite3', '~> 1.4.0'
+  gem 'sqlite3'
+  #gem 'sqlite3', '~> 1.4.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -162,7 +169,8 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  #gem 'chromedriver-helper'
+  gem 'webdrivers', '~> 3.0'
 
 end
 
@@ -177,3 +185,4 @@ group :development, :test do
 end
 
 gem 'simplecov', require: false
+=end

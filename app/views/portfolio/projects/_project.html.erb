@@ -1,0 +1,30 @@
+<div class='col-sm-6 col-lg-4'>
+  <div class="card">
+      <div class="card-topper" style='background-image: url(<%= project.banner_image_url %>);'></div>
+    <div class="card-block">
+    <h4 class="card-title"><%= link_to project.title, project %></h4>
+       <p class="published-date"><%= project.display_day_published%></p>
+       <p class="card-text"><%= truncate(project.description, length: 130) %></p>
+      <%= link_to 'Read', project, class: 'btn btn-read' %>
+    </div>
+  </div>
+</div>
+
+<% if false %>
+
+<div class='col-sm-6 col-lg-4'>
+  <div class="card">
+    <%= link_to project do %>
+      <div class="card-topper" style='background-image: url(<%= project.banner_image_url %>);'></div>
+    <% end %>
+    <div class="card-block">
+      <h4 class="card-title"><%= link_to project.title, project %></h4>
+      <h6 class="published-date"><%= project.display_day_published %></h6>
+      <%= link_to project do %>
+        <p class="card-text"><%= truncate(project.description, length: 130) %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<% end %>

@@ -1,6 +1,30 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/Tiffany_1/cs3300/prog/app/models/author.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/Tiffany_1/cs3300/prog/app/helpers/application_helper.rb": {
         "lines": [
           1,
@@ -13,11 +37,35 @@
           null
         ]
       },
-      "/Users/Tiffany_1/cs3300/prog/app/controllers/projects_controller.rb": {
+      "/Users/Tiffany_1/cs3300/prog/app/models/project.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          null,
           1,
           1,
           null,
+          1,
+          null,
+          4,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/controllers/portfolio/projects_controller.rb": {
+        "lines": [
+          1,
+          1,
           null,
           1,
           3,
@@ -25,102 +73,27 @@
           null,
           null,
           1,
-          null,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          2,
-          null,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
           0,
           null,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/controllers/portfolio_controller.rb": {
+        "lines": [
           1,
-          null,
-          1,
-          7,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
           null
         ]
       },
       "/Users/Tiffany_1/cs3300/prog/app/controllers/application_controller.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/Tiffany_1/cs3300/prog/app/models/project.rb": {
-        "lines": [
           1,
           null,
           1,
-          1,
           null,
-          4,
-          null,
-          1,
-          24,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/Tiffany_1/cs3300/prog/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
           null
         ]
       },
@@ -138,6 +111,116 @@
         "lines": [
           0,
           0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/controllers/author_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/controllers/authors/projects_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/Tiffany_1/cs3300/prog/app/controllers/portfolio/pages_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
           0,
           0
         ],
@@ -168,6 +251,6 @@
         }
       }
     },
-    "timestamp": 1648613298
+    "timestamp": 1649897038
   }
 }

@@ -1,7 +1,11 @@
 class Project < ApplicationRecord
 
+    validates_presence_of :title, :description
+
     extend FriendlyId
     friendly_id :title, use: :slugged
+
+    belongs_to :author
 
     scope :most_recent, -> { order(id: :desc) }
 
@@ -14,7 +18,4 @@ class Project < ApplicationRecord
     end
 end
 
-class Project < ApplicationRecord
-    validates_presence_of :title, :description
-  end
 

@@ -1,4 +1,5 @@
 
+<%if false %>
 <div class='col-sm-6 col-lg-4'>
   <div class="card">
       <div class="card-topper" style='background-image: url(<%= project.banner_image_url %>);'></div>
@@ -10,3 +11,11 @@
     </div>
   </div>
 </div>
+<%end%>
+
+<tr>
+  <td><%= link_to project.title, authors_project_path(project) %></td>
+  <td></td>
+  <td><%= link_to 'Edit', edit_authors_project_path(project), class: 'btn btn-sm btn-warning' %></td>
+  <td><%= link_to 'Remove', authors_project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+</tr>

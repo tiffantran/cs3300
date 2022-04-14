@@ -1,3 +1,4 @@
+<% if false %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/">Folio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item list-group-item">
-        <%= link_to 'Projects', root_path, class: "nav-link #{yield(:portfolio_active)}" %>
+        <%= link_to 'Projects', root_path, class: "nav-link #{yield(:project_active)}" %>
       </li>
       <li class="nav-item list-group-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
@@ -16,5 +17,64 @@
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
       </li>
     </ul>    
+  </div>
+</nav>
+<% end %>
+
+<div class="collapse" id="exCollapsingNavbar">
+  <div class="collapse-bg p-a-1">
+    <div class='card'>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= link_to 'Projects', root_path, class: "nav-link #{yield(:portfolio_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        </li>
+        <% if author_signed_in? %>
+          <li class="list-group-item">
+            <%= link_to 'My projects', projects_path, class: "nav-link #{yield(:author)}" %>
+          </li>
+          <li class="list-group-item">
+            <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-light bg-faded">
+  <div class='container'>
+    <a class='navbar-brand' href='/'>
+      Folio
+    </a>
+    <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+      &#9776;
+    </button>
+    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <li class="nav-item">
+        <%= link_to 'Portfolio', root_path, class: "nav-link #{yield(:portfolio_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+      </li>
+      <% if author_signed_in? %>
+        <li class="nav-item dropdown author-nav">
+          <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to 'My projects', projects_path, class: "dropdown-item" %>
+          <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>

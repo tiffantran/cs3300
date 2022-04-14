@@ -1,0 +1,16 @@
+<% provide(:page_title, 'All Projects') %>
+<% provide(:portfolio_active, 'active') %>
+
+<div class="row">
+  <div>
+    <%= link_to 'New project', new_authors_project_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+  <br>
+  <table class="table table-striped">
+    <tr>
+      <th colspan="5">Title</th>
+    </tr>
+    <%= render @projects %>
+  </table>
+</div>
+

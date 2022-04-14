@@ -1,0 +1,34 @@
+<% provide(:page_title, @project.title) %>
+<% provide(:portfolio_active, 'active') %>
+
+<% if false%>
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+
+<div>
+<!--<div class="row">-->
+  <!--<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-left-center">-->
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", authors_projects_path %>
+  <p><%= @project.display_day_published %></p>
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-1 col-lg-2"></div>
+  <div class="col-md-10 col-lg-8 text-xs-center">
+    <h1><%= @project.title %></h1>
+    <h6><%= @project.display_day_published %></h6>
+    <%= @project.body.html_safe %>
+
+    <div class="author-bio">
+    </div>
+
+    <div id="disqus_thread"></div>
+    <noscript>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+</div>

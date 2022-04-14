@@ -9,7 +9,7 @@
 <!--<div class="row">-->
   <!--<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-left-center">-->
   <%= link_to "Edit this project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
+  <%= link_to "Back to projects", authors_projects_path %>
   <p><%= @project.display_day_published %></p>
   <%= button_to "Destroy this project", @project, method: :delete %>
 </div>

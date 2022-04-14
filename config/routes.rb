@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  get 'about' => 'pages#about', as: :about
-  get 'contact' => 'pages#contact', as: :contact
+  devise_for :authors
+  root to: 'portfolio/projects#index'
 
-  root to: 'projects#index'
-  resources :projects
+  namespace :authors do
+    resources :projects
+    
+  end
+
+  #resources :projects
+
+  scope module: 'portfolio' do
+    get 'about' => 'pages#about', as: :about
+    get 'contact' => 'pages#contact', as: :contact
+    get 'projects' => 'projects#index', as: :projects
+    get 'projects/:id' => 'projects#show', as: :project
+    
+  end
 end

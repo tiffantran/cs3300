@@ -44,6 +44,7 @@ RSpec.feature "Projects", type: :feature do
     end
   end
 
+=begin
   context "Remove existing project" do
     let!(:project) { Project.create(title: "Test title", description: "Test content") }
     scenario "remove project" do
@@ -53,4 +54,6 @@ RSpec.feature "Projects", type: :feature do
       expect(Project.count).to eq(0)
     end
   end
+=end
 end
+

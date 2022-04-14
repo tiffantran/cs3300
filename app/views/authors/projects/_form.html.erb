@@ -1,0 +1,122 @@
+
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :banner_image_url %>
+    <%= form.text_field :banner_image_url %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<% if false %>
+
+<%= form_for(project, url: url) do |f| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-block">
+          <% if @project.new_record? %>
+            <h4 class="card-title">New project</h4>
+          <% else %>
+            <h4 class="card-title">
+              <b>Edit</b>
+              <span class="thin-text"><%= @project.title %></span>
+            </h4>
+          <% end %>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="field">
+              <%= f.label :title %>
+              <%= f.text_field :title, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= f.label :banner_image_url %>
+              <%= f.text_field :banner_image_url, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= f.label :description %>
+              <%= f.text_area :description, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= f.label 'Tags' %>
+              <%= f.text_area :tag_list, class: 'form-control' %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="actions">
+              <%= f.submit "Save portfolio project", class: 'btn btn-success btn-block' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <% if @project.persisted? %>
+        <%= link_to 'Show', @project %> |
+      <% end %>
+      <%= link_to 'Back', authors_projects_path %>
+
+    </div>
+    <div class="col-md-8">
+
+      <div class="field">
+          <%= f.text_area :body %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<% end %>
+<% end %>

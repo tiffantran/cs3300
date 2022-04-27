@@ -7,18 +7,18 @@ module Authors
 #=end
         # GET /projects or /projects.json
         def index
-        @projects = Project.most_recent
+        @projects = current_author.projects.most_recent
         end
     
         # GET /projects/1 or /projects/1.json
         def show
-            @project = Project.friendly.find(params[:id])
+           # @project = current_author.projects.friendly.find(params[:id])
         end
     
 #=begin
         # GET /projects/new
         def new
-        @project = Project.new
+            @project = current_author.projects.new
         end
     
         # GET /projects/1/edit
@@ -27,11 +27,11 @@ module Authors
     
         # POST /projects or /projects.json
         def create
-        @project = Project.new(project_params)
+            @project = current_author.projects.new(project_params)
     
         respond_to do |format|
             if @project.save
-            format.html { redirect_to project_url(@project), notice: "Project was successfully created." }
+            format.html { redirect_to authors_project_path(@project), notice: "Project was successfully created." }
             format.json { render :show, status: :created, location: @project }
             else
             format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +44,7 @@ module Authors
         def update
         respond_to do |format|
             if @project.update(project_params)
-            format.html { redirect_to project_url(@project), notice: "Project was successfully updated." }
+            format.html { redirect_to authors_project_path(@project), notice: "Project was successfully updated." }
             format.json { render :show, status: :ok, location: @project }
             else
             format.html { render :edit, status: :unprocessable_entity }
@@ -58,7 +58,7 @@ module Authors
         @project.destroy
     
         respond_to do |format|
-            format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
+            format.html { redirect_to authors_projects_url, notice: "current_author.projects was successfully destroyed." }
             format.json { head :no_content }
         end
         end
@@ -66,7 +66,7 @@ module Authors
         private
         # Use callbacks to share common setup or constraints between actions.
         def set_project
-            @project = Project.friendly.find(params[:id])
+            @project = current_author.projects.friendly.find(params[:id])
         end
     
         # Only allow a list of trusted parameters through.

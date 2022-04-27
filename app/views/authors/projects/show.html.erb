@@ -1,15 +1,17 @@
 <% provide(:page_title, @project.title) %>
-<% provide(:portfolio_active, 'active') %>
-
-<p style="color: green"><%= notice %></p>
-
-<%= render @project %>
+<% provide(:author, 'active') %>
 
 <div>
-<!--<div class="row">-->
-  <!--<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-left-center">-->
-  <%= link_to "Edit this project", edit_authors_project_path(@project) %> |
-  <%= link_to "Back to projects", authors_projects_path %>
-  <p><%= @project.display_day_published %></p>
-  <%= button_to "Destroy this project", @project, method: :delete %>
+  <%= link_to 'Edit', edit_authors_project_path(@project), class: 'btn btn-sm btn-warning' %>
+  <%= link_to 'Remove', authors_project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
 </div>
+
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%= @project.title %></h1>
+    <p><%= @project.display_day_published %></p>
+    <%= @project.body.html_safe %>
+  </div>
+</div>
+
+

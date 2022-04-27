@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-04-13T19:39:57-06:00">2022-04-13T19:39:57-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-04-26T20:51:25-06:00">2022-04-26T20:51:25-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  46.59%
+  47.13%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.6
+         0.61
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>88</b> relevant lines,
+    <b>87</b> relevant lines,
     <span class="green"><b>41</b> lines covered</span> and
-    <span class="red"><b>47</b> lines missed. </span>
+    <span class="red"><b>46</b> lines missed. </span>
     (<span class="red">
-  46.59%
+  47.13%
 </span>
 )
   </div>
@@ -116,12 +116,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c5b11ef4833e41056ce0867796723fd4837f10d3" class="src_link" title="app/controllers/authors/projects_controller.rb">app/controllers/authors/projects_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">37.14 %</td>
+            <td class="red strong cell--number t-file__coverage">38.24 %</td>
             <td class="cell--number">78</td>
-            <td class="cell--number">35</td>
+            <td class="cell--number">34</td>
             <td class="cell--number">13</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">0.37</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">0.38</td>
             
           </tr>
         
@@ -247,14 +247,14 @@
     <span class="group_name">Controllers</span>
     (<span class="covered_percent">
       <span class="red">
-  43.64%
+  44.44%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.47
+         0.48
        </span>
     </span> hits/line
     )
@@ -267,11 +267,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>55</b> relevant lines,
+    <b>54</b> relevant lines,
     <span class="green"><b>24</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed. </span>
+    <span class="red"><b>30</b> lines missed. </span>
     (<span class="red">
-  43.64%
+  44.44%
 </span>
 )
   </div>
@@ -318,12 +318,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c5b11ef4833e41056ce0867796723fd4837f10d3" class="src_link" title="app/controllers/authors/projects_controller.rb">app/controllers/authors/projects_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">37.14 %</td>
+            <td class="red strong cell--number t-file__coverage">38.24 %</td>
             <td class="cell--number">78</td>
-            <td class="cell--number">35</td>
+            <td class="cell--number">34</td>
             <td class="cell--number">13</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">0.37</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">0.38</td>
             
           </tr>
         
@@ -1139,7 +1139,7 @@
     <h3>app/controllers/authors/projects_controller.rb</h3>
     <h4>
       <span class="red">
-  37.14%
+  38.24%
 </span>
 
       lines covered
@@ -1148,9 +1148,9 @@
     
 
     <div class="t-line-summary">
-      <b>35</b> relevant lines.
+      <b>34</b> relevant lines.
       <span class="green"><b>13</b> lines covered</span> and
-      <span class="red"><b>22</b> lines missed.</span>
+      <span class="red"><b>21</b> lines missed.</span>
     </div>
 
     
@@ -1266,7 +1266,7 @@
 
             
 
-            <code class="ruby">        @projects = Project.most_recent</code>
+            <code class="ruby">        @projects = current_author.projects.most_recent</code>
           </li>
         </div>
       
@@ -1315,13 +1315,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
             
 
-            <code class="ruby">            @project = Project.friendly.find(params[:id])</code>
+            <code class="ruby">           # @project = current_author.projects.friendly.find(params[:id])</code>
           </li>
         </div>
       
@@ -1387,7 +1387,7 @@
 
             
 
-            <code class="ruby">        @project = Project.new</code>
+            <code class="ruby">            @project = current_author.projects.new</code>
           </li>
         </div>
       
@@ -1486,7 +1486,7 @@
 
             
 
-            <code class="ruby">        @project = Project.new(project_params)</code>
+            <code class="ruby">            @project = current_author.projects.new(project_params)</code>
           </li>
         </div>
       
@@ -1530,7 +1530,7 @@
 
             
 
-            <code class="ruby">            format.html { redirect_to project_url(@project), notice: &quot;Project was successfully created.&quot; }</code>
+            <code class="ruby">            format.html { redirect_to authors_project_path(@project), notice: &quot;Project was successfully created.&quot; }</code>
           </li>
         </div>
       
@@ -1673,7 +1673,7 @@
 
             
 
-            <code class="ruby">            format.html { redirect_to project_url(@project), notice: &quot;Project was successfully updated.&quot; }</code>
+            <code class="ruby">            format.html { redirect_to authors_project_path(@project), notice: &quot;Project was successfully updated.&quot; }</code>
           </li>
         </div>
       
@@ -1827,7 +1827,7 @@
 
             
 
-            <code class="ruby">            format.html { redirect_to projects_url, notice: &quot;Project was successfully destroyed.&quot; }</code>
+            <code class="ruby">            format.html { redirect_to authors_projects_url, notice: &quot;current_author.projects was successfully destroyed.&quot; }</code>
           </li>
         </div>
       
@@ -1915,7 +1915,7 @@
 
             
 
-            <code class="ruby">            @project = Project.friendly.find(params[:id])</code>
+            <code class="ruby">            @project = current_author.projects.friendly.find(params[:id])</code>
           </li>
         </div>
       

@@ -1,12 +1,4 @@
 <% provide(:page_title, 'New Post') %>
-<% provide(:portfolio_active, 'active') %>
+<% provide(:author, 'active') %>
 
-<h1>New project</h1>
-
-<%= render "form", project: @project %>
-
-<br>
-
-<div>
-  <%= link_to "Back to projects", authors_projects_path %>
-</div>
+<%= render 'form', project: @project, url: authors_projects_url %>

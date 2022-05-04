@@ -1,6 +1,7 @@
-require "rails_helper"
+require 'rails_helper'
 
 =begin
+
 RSpec.describe ProjectsController, type: :controller do
   context "GET #index" do
     it "returns a success response" do
@@ -19,3 +20,4 @@ RSpec.describe ProjectsController, type: :controller do
   end
 end
 =end
+
